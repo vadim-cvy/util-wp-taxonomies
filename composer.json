@@ -1,0 +1,13 @@
+{
+  "name": "cvy/util-wp-custom-taxonomy",
+  "autoload": {
+    "psr-4": {
+      "Cvy\\WP\\CustomTaxonomy\\": "src/"
+    }
+  },
+  "require": {
+    "cvy/util-wp-objects-type-wrapper": "^1",
+    "cvy/util-wp-terms-query": "^1",
+    "cvy/util-wp-term": "^1"
+  }
+}
