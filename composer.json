@@ -1,8 +1,8 @@
 {
-  "name": "cvy/util-wp-custom-taxonomy",
+  "name": "cvy/util-wp-taxonomies",
   "autoload": {
     "psr-4": {
-      "Cvy\\WP\\CustomTaxonomy\\": "src/"
+      "Cvy\\WP\\Taxonomies\\": "src/"
     }
   },
   "require": {
