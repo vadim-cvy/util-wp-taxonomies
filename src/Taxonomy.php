@@ -1,12 +1,27 @@
 <?php
-namespace Cvy\WP\CustomTaxonomy;
+namespace Cvy\WP\Taxonomies;
 
 use Cvy\WP\TermsQuery\TermsQuery;
 
 use Cvy\WP\Term\Term;
 
-abstract class CustomTaxonomy extends \Cvy\WP\ObjectsTypeWrap\ObjectsTypeWrapper
+abstract class Taxonomy extends \Cvy\WP\ObjectsTypeWrapper\ObjectsTypeWrapper
 {
+  static public function get_label_single() : string
+  {
+    return static::get_original()->labels->singular_name;
+  }
+
+  static public function get_label_multiple() : string
+  {
+    return static::get_original()->labels->name;
+  }
+
+  static public function get_original() : \stdClass
+  {
+    return get_taxonomy( static::get_slug() );
+  }
+
   static public function wrap_one( int $term_id ) : Term
   {
     return new Term( $term_id );
