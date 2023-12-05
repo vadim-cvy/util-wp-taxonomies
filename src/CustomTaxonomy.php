@@ -21,17 +21,17 @@ abstract class CustomTaxonomy extends Taxonomy
     $label_multiple = $this->get_label_multiple();
 
     $labels = [
-      'name'              => 'Genres',
-      'singular_name'     => 'Genre',
-      'search_items'      => 'Search Genres',
-      'all_items'         => 'All Genres',
-      'parent_item'       => 'Parent Genre',
-      'parent_item_colon' => 'Parent Genre:',
-      'edit_item'         => 'Edit Genre',
-      'update_item'       => 'Update Genre',
-      'add_new_item'      => 'Add New Genre',
-      'new_item_name'     => 'New Genre Name',
-      'menu_name'         => 'Genre',
+      'name'              => "$label_multiple",
+      'singular_name'     => "$label_single",
+      'search_items'      => "Search $label_multiple",
+      'all_items'         => "All $label_multiple",
+      'parent_item'       => "Parent $label_single",
+      'parent_item_colon' => "Parent $label_single:",
+      'edit_item'         => "Edit $label_single",
+      'update_item'       => "Update $label_single",
+      'add_new_item'      => "Add New $label_single",
+      'new_item_name'     => "New $label_single Name",
+      'menu_name'         => "$label_single",
     ];
 
     return [
